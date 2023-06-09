@@ -4,7 +4,7 @@ import {
   creatingTest,
   getAllTest,
   getAllTested,
-} from "../Contoller/testController";
+} from "../Contoller/TestController";
 
 const router = express.Router();
 
