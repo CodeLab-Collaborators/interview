@@ -19,7 +19,7 @@ app.use("/", (req, res) => {
     res.status(200).json({ message: "Welcome" });
 });
 mongoose_1.default
-    .connect("mongodb+srv://brighterdayscodelab:<password>@cluster0.upn8ipm.mongodb.net/newIntakeDB?retryWrites=true&w=majority")
+    .connect("mongodb+srv://brighterdayscodelab:brighterdayscodelab@cluster0.upn8ipm.mongodb.net/newIntakeDB?retryWrites=true&w=majority")
     .then(() => {
     const server = app.listen(process.env.PORT || port, () => {
         console.log("server up and running!");
