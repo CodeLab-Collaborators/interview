@@ -21,7 +21,7 @@ app.use("/", (req: Request, res: Response) => {
 
 mongoose
   .connect(
-    "mongodb+srv://shecodesaj:shecodesaj@cluster0.xe1jgnf.mongodb.net/newIntakeDB",
+    "mongodb+srv://brighterdayscodelab:<password>@cluster0.upn8ipm.mongodb.net/newIntakeDB?retryWrites=true&w=majority",
   )
   .then(() => {
     const server = app.listen(process.env.PORT || port, () => {
