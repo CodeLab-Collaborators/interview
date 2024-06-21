@@ -91,7 +91,7 @@ const userModel = new mongoose.Schema(
       type: String,
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
-export default mongoose.model<iTestResult>("user09s", userModel);
+export default mongoose.model<iTestResult>("user10s", userModel);

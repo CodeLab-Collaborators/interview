@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const TestController_1 = require("../Contoller/TestController");
+const testController_1 = require("../controller/testController");
 const router = express_1.default.Router();
-router.route("/createTest").post(TestController_1.creatingTest);
-router.route("/viewTest").get(TestController_1.getAllTest);
-router.route("/viewTested").get(TestController_1.getAllTested);
-router.route("/:id/create-questions").post(TestController_1.CreateQuestions);
+router.route("/createTest").post(testController_1.creatingTest);
+router.route("/viewTest").get(testController_1.getAllTest);
+router.route("/viewTested").get(testController_1.getAllTested);
+router.route("/:id/create-questions").post(testController_1.CreateQuestions);
 exports.default = router;

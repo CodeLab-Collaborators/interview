@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import userData from "../Model/userModel";
-import cloudinary from "../Utils/cloudinary";
+import userData from "../model/userModel";
+import cloudinary from "../utils/cloudinary";
 import path from "path";
 import streamifier from "streamifier";
 import otpGenerator from "otp-generator";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
-import userModel from "../Model/userModel";
+import userModel from "../model/userModel";
 
 export const getUser = async (req: Request, res: Response) => {
   const getting = await userData.find({ new: true });
@@ -56,7 +56,7 @@ export const registerUser = async (req: any, res: Response) => {
             } else {
               return reject(error);
             }
-          },
+          }
         );
         await streamifier.createReadStream(req?.file!.buffer!).pipe(stream);
       });
@@ -101,7 +101,7 @@ export const updatingLogic = async (req: Request, res: Response) => {
         logic,
         logicToggle: true,
       },
-      { new: true },
+      { new: true }
     );
 
     res.status(200).json(editStatus);
@@ -119,7 +119,7 @@ export const updatingLeadership = async (req: Request, res: Response) => {
         leadership,
         leadershipToggle: true,
       },
-      { new: true },
+      { new: true }
     );
 
     res.status(200).json(editStatus);
@@ -138,7 +138,7 @@ export const updatingPsycho = async (req: Request, res: Response) => {
         psychoToggle: true,
         done: true,
       },
-      { new: true },
+      { new: true }
     );
 
     res.status(200).json(editStatus);

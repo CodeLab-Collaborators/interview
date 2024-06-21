@@ -6,7 +6,7 @@ import {
   updatingLeadership,
   updatingLogic,
   updatingPsycho,
-} from "../Contoller/userController";
+} from "../controller/userController";
 // import upload from "../Utils/multer";
 import multer from "multer";
 

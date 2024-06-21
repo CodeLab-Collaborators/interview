@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 import lodash from "lodash";
-import testModel from "../Model/testModel";
-import questionModel from "../Model/questionModel";
 import { Request, Response } from "express";
+
+import testModel from "../model/testModel";
+import questionModel from "../model/questionModel";
 
 export const creatingTest = async (req: Request, res: Response) => {
   try {
@@ -69,7 +70,7 @@ export const CreateQuestions = async (req: Request, res: Response) => {
       });
 
       await viewTest?.viewTest?.push(
-        new mongoose.Types.ObjectId(createQuestion?._id),
+        new mongoose.Types.ObjectId(createQuestion?._id)
       );
 
       viewTest.save();

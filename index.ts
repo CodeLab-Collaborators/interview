@@ -2,8 +2,8 @@ import express, { Application, Request, Response } from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 
-import user from "./Routes/userRoute";
-import question from "./Routes/testRoute";
+import user from "./routes/userRoute";
+import question from "./routes/testRoute";
 
 const app: Application = express();
 const port: number = 2255;
@@ -22,7 +22,7 @@ app.use("/", (req: Request, res: Response) => {
 // mongodb+srv://brighterdayscodelab:brighterdayscodelab@cluster0.upn8ipm.mongodb.net/newIntakeDB?retryWrites=true&w=majority
 mongoose
   .connect(
-    "mongodb+srv://shecodesaj:shecodesaj@cluster0.xe1jgnf.mongodb.net/newIntakeDB?retryWrites=true&w=majority",
+    "mongodb+srv://shecodesaj:shecodesaj@cluster0.xe1jgnf.mongodb.net/newIntakeDB?retryWrites=true&w=majority"
   )
   .then(() => {
     const server = app.listen(process.env.PORT || port, () => {
